@@ -59,6 +59,9 @@ sudo apt-get install kibana
 ```
 sudo nano /etc/kibana/kibana.yml
 ```
+--
+![Image](https://i.imgur.com/QgpY0iI.png)
+--
 
 ``
 Set server.host to the private IP of the logstashkibana instance.
