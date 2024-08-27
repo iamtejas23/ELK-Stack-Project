@@ -29,6 +29,13 @@ Set the network.host to the private IPv4 address of your instance.
 Save and exit the file.
 ``
 
+### Start Elasticsearch and check its status:
+```
+sudo systemctl start elasticsearch 
+sudo systemctl status elasticsearch
+```
+
+
 ``
 2. Deploy Logstash and Kibana Instance
 ``
@@ -57,7 +64,7 @@ Set elasticsearch.hosts to the private IP of the Elasticsearch instance.
 Save and exit the file.
 ``
 
-###Start Kibana and check its status:
+### Start Kibana and check its status:
 ```
 sudo systemctl start kibana 
 sudo systemctl status kibana
