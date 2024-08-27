@@ -146,7 +146,12 @@ sudo nano /etc/filebeat/filebeat.yml
 Set the hosts field to the private IP of the logstashkibana instance.
 Save and exit the file.
 
-### 2 images
+-------
+
+![Image](https://i.imgur.com/h0sKtTs.png)
+![Image](https://i.imgur.com/p8UJ5Xi.png)
+
+-------
 
 ```
 sudo filebeat setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["<elasticsearch_IP>:9200"]'
@@ -162,3 +167,5 @@ sudo filebeat modules enable apache
 systemctl restart filebeat.service
 filebeat test output
 ```
+
+
