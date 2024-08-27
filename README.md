@@ -74,3 +74,41 @@ Save and exit the file.
 sudo systemctl start kibana 
 sudo systemctl status kibana
 ```
+
+--
+``
+3. Install Logstash
+``
+
+```
+sudo apt-get install logstash
+```
+
+```
+cd /etc/logstash/conf.d/ 
+vim apache.conf
+```
+
+```
+input {
+  beats {
+    port => "5044"
+  }
+}
+
+filter {
+  grok {
+    match => { "message" => "%{COMBINEDAPACHELOG}" }
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => ["http://172.31.88.220:9200"]     -----> chnage IP Of Elasticserch
+    index => "%{[@metadata][beat]}-%{[@metadata][version]}-%{+YYYY.MM.dd}"
+  }
+  stdout {
+    codec => rubydebug
+  }
+}
+```
