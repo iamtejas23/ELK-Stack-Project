@@ -126,3 +126,39 @@ tail -f /var/log/logstash/logstash-plain.log
 ```
 
 ----
+``
+4. Deploy the Client Instance
+``
+
+```
+sudo apt-get update
+sudo apt-get install apache2 -y
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.17.6-amd64.deb
+sudo dpkg -i filebeat-7.17.6-amd64.deb
+```
+
+### Configure Filebeat by editing the filebeat.yml file:
+
+```
+sudo nano /etc/filebeat/filebeat.yml
+```
+
+Set the hosts field to the private IP of the logstashkibana instance.
+Save and exit the file.
+
+### 2 images
+
+```
+sudo filebeat setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["<elasticsearch_IP>:9200"]'
+
+```
+
+```
+sudo filebeat modules enable system
+sudo filebeat modules enable apache
+```
+
+```
+systemctl restart filebeat.service
+filebeat test output
+```
