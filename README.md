@@ -45,3 +45,14 @@ echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee 
 apt-get update -y
 sudo apt-get install kibana
 ```
+
+### Configure Kibana by editing the kibana.yml file:
+```
+sudo nano /etc/kibana/kibana.yml
+```
+
+``
+Set server.host to the private IP of the logstashkibana instance.
+Set elasticsearch.hosts to the private IP of the Elasticsearch instance.
+Save and exit the file.
+``
