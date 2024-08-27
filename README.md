@@ -1,7 +1,7 @@
 # ELK-Stack-Project
 
 ##Launch an EC2 instance with Ubuntu, choosing t2.medium as the instance type.
-``
+```
 #update
 sudo apt-get update
 #Install the default JDK and JRE
@@ -16,4 +16,4 @@ sudo apt-get update -y
 #Install Elasticsearch
 sudo apt-get install elasticsearch
 
-``
+```
