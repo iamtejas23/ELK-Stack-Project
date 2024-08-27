@@ -25,7 +25,7 @@ sudo apt-get install elasticsearch
 sudo nano /etc/elasticsearch/elasticsearch.yml
 ```
 ``
-# make like similar
+### make like similar
 # ---------------------------------- Network -----------------------------------
 #
 # By default Elasticsearch is only accessible on localhost. Set a different
@@ -44,7 +44,7 @@ http.port: 9200                ---> Add
 discovery.type: single-node    ---> Add
 # Pass an initial list of hosts to perform discovery when this node is started:
 # The default list of hosts is ["127.0.0.1", "[::1]"]
-#
+###
 
 Set the network.host to the private IPv4 address of your instance.
 Save and exit the file.
