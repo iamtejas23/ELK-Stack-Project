@@ -1,8 +1,8 @@
 # ELK-Stack-Project
 
+``1.install elasticsearch`` 
 ##Launch an EC2 instance with Ubuntu, choosing t2.medium as the instance type.
 
-``1.install elasticsearch`` 
 ```
 #update
 sudo apt-get update
@@ -19,3 +19,12 @@ sudo apt-get update -y
 sudo apt-get install elasticsearch
 
 ```
+
+###Configure Elasticsearch by editing the elasticsearch.yml file:
+```
+sudo nano /etc/elasticsearch/elasticsearch.yml
+```
+``
+Set the network.host to the private IPv4 address of your instance.
+Save and exit the file.
+``
