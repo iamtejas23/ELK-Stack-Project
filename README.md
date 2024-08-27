@@ -112,3 +112,17 @@ output {
   }
 }
 ```
+
+### Start Logstash and check its status:
+
+```
+sudo systemctl start logstash 
+sudo systemctl status logstash
+```
+
+### Verify Logstash is running by checking the logs:
+```
+tail -f /var/log/logstash/logstash-plain.log
+```
+
+----
