@@ -28,6 +28,7 @@ sudo nano /etc/elasticsearch/elasticsearch.yml
 Set the network.host to the private IPv4 address of your instance.
 Save and exit the file.
 ``
+--
 ![Image](https://i.imgur.com/FQkT8YG.png)
 
 ### Start Elasticsearch and check its status:
