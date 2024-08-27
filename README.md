@@ -56,3 +56,9 @@ Set server.host to the private IP of the logstashkibana instance.
 Set elasticsearch.hosts to the private IP of the Elasticsearch instance.
 Save and exit the file.
 ``
+
+###Start Kibana and check its status:
+```
+sudo systemctl start kibana 
+sudo systemctl status kibana
+```
